@@ -40,11 +40,14 @@ function Leaderboard( { clickedTournament } ) {
   const current_leaderboard = leaders && leaders.leaderboardRows.length ? (
     leaders.leaderboardRows.map(player => {
         return (
-            <div className="collection-item" key={player.playerId}>
-            <span>{player.firstName}</span>
-            <span>{player.lastName}</span>
-            <span>{player.total}</span>
-            </div>
+            <tr key={player.playerId}>
+                <td>{player.position}</td>
+                <td>{player.firstName}</td>
+                <td>{player.lastName}</td>
+                <td>{player.total}</td>
+                <td>{player.currentHole['$numberInt']}</td>
+            </tr>
+            
         )
     })
   ) : (
@@ -58,8 +61,7 @@ function Leaderboard( { clickedTournament } ) {
     <>
     {leaders && <Top3_scorecards top_3 = {leaders.leaderboardRows.slice(0,3)} tournId = {clickedTournament.tournId} yr = {currentYear} />}
 
-
-    <h1>{current_leaderboard && current_leaderboard}</h1>
+    <table>{current_leaderboard && current_leaderboard}</table>
     </>
     )
 }

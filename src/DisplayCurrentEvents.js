@@ -64,8 +64,7 @@ function DisplayCurrentEvents() {
         Current Week Events (click one):
         {buttonList}
         <h1>{clickedTournament && clickedTournament.name}</h1>
-        {clickedTournament && <p>Winner's Share:</p>}
-        {clickedTournament && clickedTournament['winnersShare']['$numberInt']}
+        {clickedTournament && <h3>Winner's Share: ${clickedTournament['winnersShare']['$numberInt']}</h3>}
         {clickedTournament && <Leaderboard clickedTournament={clickedTournament} />}
     </div>
     </>

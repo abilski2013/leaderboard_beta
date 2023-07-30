@@ -45,7 +45,7 @@ function Top3_scorecards({ top_3, tournId, yr }) {
 
     return (
         <>
-            <h1>Check out the three current leaders...</h1>
+            <h1>Current Leaders</h1>
             <div>
                 {shouldPassProp && <Top3_chart t3_scorecards = {apiResults}/>}
             </div>
