@@ -14,7 +14,7 @@ function Top3_scorecards({ top_3, tournId, yr }) {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '6a6cf0efc8mshd2e48323358f56ap1fb08djsn384fcbea4fd7',
+                    'X-RapidAPI-Key': `${process.env.REACT_APP_RAPID_API_KEY}`,
                     'X-RapidAPI-Host': 'live-golf-data.p.rapidapi.com'
                 }
             };

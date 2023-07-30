@@ -15,7 +15,7 @@ function Leaderboard( { clickedTournament } ) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '6a6cf0efc8mshd2e48323358f56ap1fb08djsn384fcbea4fd7',
+            'X-RapidAPI-Key': `${process.env.REACT_APP_RAPID_API_KEY}`,
             'X-RapidAPI-Host': 'live-golf-data.p.rapidapi.com'
         }
     };
@@ -53,21 +53,6 @@ function Leaderboard( { clickedTournament } ) {
   
   
   {leaders && console.log(leaders.leaderboardRows.slice(0,3))}
-
-  // when the prop changes, go fetch the players for the tournament id
-
-  // set state for players data null at first, then update to top 5 players
-
-  // when state changes, fetch to api again and get the scorecards
-
-  // set line thickness state to number 1 guy, 
-
-  // on click change the state of line thickness for the guy clicked on
-
-  // Display the names to top 5
-
-  // display the line charts of their scorecard data 
-
 
   return (
     <>
